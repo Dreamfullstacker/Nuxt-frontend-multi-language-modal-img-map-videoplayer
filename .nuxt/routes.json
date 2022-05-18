@@ -1,0 +1,156 @@
+[
+  {
+    "name": "about___ar",
+    "path": "/about",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_4e7c3aea"
+  },
+  {
+    "name": "chapterfive___ar",
+    "path": "/chapterfive",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterfive\\\\index.vue",
+    "chunkName": "pages/chapterfive/index",
+    "_name": "_1d5d0e10"
+  },
+  {
+    "name": "chapterfour___ar",
+    "path": "/chapterfour",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterfour\\\\index.vue",
+    "chunkName": "pages/chapterfour/index",
+    "_name": "_9bf2dbf8"
+  },
+  {
+    "name": "chapterthree___ar",
+    "path": "/chapterthree",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index.vue",
+    "chunkName": "pages/chapterthree/index",
+    "_name": "_631ea68c"
+  },
+  {
+    "name": "chaptertwo___ar",
+    "path": "/chaptertwo",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chaptertwo\\\\index.vue",
+    "chunkName": "pages/chaptertwo/index",
+    "_name": "_31eb1dc4"
+  },
+  {
+    "name": "contact___ar",
+    "path": "/contact",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\contact\\\\index.vue",
+    "chunkName": "pages/contact/index",
+    "_name": "_e66b0d92"
+  },
+  {
+    "name": "index___en",
+    "path": "/en",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_cff24d46"
+  },
+  {
+    "name": "film___ar",
+    "path": "/film",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\film\\\\index.vue",
+    "chunkName": "pages/film/index",
+    "_name": "_51d3ab99"
+  },
+  {
+    "name": "team___ar",
+    "path": "/team",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\team\\\\index.vue",
+    "chunkName": "pages/team/index",
+    "_name": "_74bb0d20"
+  },
+  {
+    "name": "trailer___ar",
+    "path": "/trailer",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\trailer\\\\index.vue",
+    "chunkName": "pages/trailer/index",
+    "_name": "_8466a378"
+  },
+  {
+    "name": "chapterthree-index copy___ar",
+    "path": "/chapterthree/index%20copy",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index copy.vue",
+    "chunkName": "pages/chapterthree/index copy",
+    "_name": "_1daae439"
+  },
+  {
+    "name": "about___en",
+    "path": "/en/about",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_4e7c3aea"
+  },
+  {
+    "name": "chapterfive___en",
+    "path": "/en/chapterfive",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterfive\\\\index.vue",
+    "chunkName": "pages/chapterfive/index",
+    "_name": "_1d5d0e10"
+  },
+  {
+    "name": "chapterfour___en",
+    "path": "/en/chapterfour",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterfour\\\\index.vue",
+    "chunkName": "pages/chapterfour/index",
+    "_name": "_9bf2dbf8"
+  },
+  {
+    "name": "chapterthree___en",
+    "path": "/en/chapterthree",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index.vue",
+    "chunkName": "pages/chapterthree/index",
+    "_name": "_631ea68c"
+  },
+  {
+    "name": "chaptertwo___en",
+    "path": "/en/chaptertwo",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chaptertwo\\\\index.vue",
+    "chunkName": "pages/chaptertwo/index",
+    "_name": "_31eb1dc4"
+  },
+  {
+    "name": "contact___en",
+    "path": "/en/contact",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\contact\\\\index.vue",
+    "chunkName": "pages/contact/index",
+    "_name": "_e66b0d92"
+  },
+  {
+    "name": "film___en",
+    "path": "/en/film",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\film\\\\index.vue",
+    "chunkName": "pages/film/index",
+    "_name": "_51d3ab99"
+  },
+  {
+    "name": "team___en",
+    "path": "/en/team",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\team\\\\index.vue",
+    "chunkName": "pages/team/index",
+    "_name": "_74bb0d20"
+  },
+  {
+    "name": "trailer___en",
+    "path": "/en/trailer",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\trailer\\\\index.vue",
+    "chunkName": "pages/trailer/index",
+    "_name": "_8466a378"
+  },
+  {
+    "name": "chapterthree-index copy___en",
+    "path": "/en/chapterthree/index%20copy",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index copy.vue",
+    "chunkName": "pages/chapterthree/index copy",
+    "_name": "_1daae439"
+  },
+  {
+    "name": "index___ar",
+    "path": "/",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_cff24d46"
+  }
+]

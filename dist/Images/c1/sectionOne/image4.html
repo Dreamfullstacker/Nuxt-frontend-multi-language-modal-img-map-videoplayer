@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: 'Roboto Slab', serif;
+      text-align: center;
+      background: url('loader.gif') no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-weight: bold;
+      font-size: 8vw;
+      background-color: #444242;
+      color: #fff;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+    }
+
+    .container {
+      margin: 0;
+      position: relative;
+      width: 100%;
+      padding: 0;
+    }
+
+    .pyramid {
+      margin: 0;
+      width: 100%;
+    }
+
+    img[usemap] {
+      border: none;
+      height: auto;
+      z-index: 0;
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 30%;
+      top: 30%;
+      width: 30%;
+      left: 30%;
+      text-align: CENTER;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 100%;
+
+    }
+
+    span.close {
+      /*float: right; */
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      /* text-shadow: 0 1px 0 #fff; */
+      filter: alpha(opacity=20);
+      opacity: .2;
+      position: absolute;
+      border-radius: 50%;
+      background: #000;
+      width: 25px;
+      right: -9px;
+      top: -14px;
+      HEIGHT: 25PX;
+      OPACITY: 1;
+    }
+
+    .modal {
+      top: 0;
+      bottom: 0;
+      padding: 30px 0;
+    }
+
+    #videoModal :after {
+      position: fixed;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -2;
+    }
+
+    #videoModal:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: #000;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    area:before {
+      content: '';
+      background: url(play.png);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 9;
+    }
+
+    .map {
+      display: flex !important;
+      width: 100% !important;
+      height: auto !important;
+      position: initial !important;
+    }
+
+    .map>canvas {
+      display: none !important;
+    }
+
+    .map> img {
+      position: initial !important;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <script src="jQuery-rwdImageMaps.js"></script>
+  <script src="jquery.maphilight.min.js"></script>
+  <script>
+
+
+
+    // * img coords generated with 
+    // http://imagemap-generator.dariodomi.de/
+
+    // * made responsive with
+    // https://github.com/stowball/jQuery-rwdImageMaps
+
+
+
+    $(document).ready(function (e) {
+
+      $('img[usemap]').rwdImageMaps();
+      $('.map').maphilight()
+
+
+
+    });
+    function showVideo2(vid) {
+
+
+      //var url = 'https://www.youtube.com/embed/' + youtubeID+'?controls=0'; 
+      var url = vid;
+      $('#popup-video source').src = url;
+      // Get the modal
+      var modal = document.getElementById('videoModal2');
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      modal.style.display = "block";
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        $('#popup-video source').src = '';
+
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          $('#popup-video source').src = '';
+        }
+      }
+    }
+
+    function showVideo(youtubeID) {
+
+
+      var url = 'https://www.youtube.com/embed/' + youtubeID + '?controls=0';
+      document.getElementById('videoIframe').src = url;
+      // Get the modal
+      var modal = document.getElementById('videoModal');
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[1];
+
+      modal.style.display = "block";
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        document.getElementById('videoIframe').src = '';
+
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.getElementById('videoIframe').src = '';
+        }
+      }
+    }
+
+    /*var videoElement = $('#video-div'),
+        loadingStatus = $('#loading-status');
+    $( document ).ready(function() {
+       videoElement.on('progress',updateLoadingStatus,false);
+       videoElement.on('canplaythrough',playVideo,false);
+        playVideo();
+    });
+    function updateLoadingStatus() {
+       var percentLoaded = parseInt(((videoElement.buffered.end(0) /
+          videoElement.duration) * 100));
+          loadingStatus.html(percentLoaded + '%');
+      
+    }
+    
+    function playVideo() {
+         document.getElementById('video-div').play();
+    }*/
+  </script>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+  <div class="container">
+
+    <div class="pyramid" style="position:relative;">
+
+
+      <!--<video playsinline autoplay muted loop id="video-div" style="z-index:0;width:100%;" >
+  <source src="video.mp4" type="video/mp4" >
+  
+</video>-->
+      <div id="loading-status"></div>
+
+      <img src="building_5s.gif" usemap="#Map" style="width:100%;" id="img-imgmap201293016112" class="map" />
+      <!--<div id="videoEle" class="container1" style="position:absolute;top:0;left:0;width:100%;">
+    <img src="building_5s.gif" usemap="#Map" style="width:100%;" id="img-imgmap201293016112"/>
+</div>-->
+
+
+      <map name="Map" id="Map">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('RAHItEOxuI0');"
+          coords="724,898,641,1030" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('9DzZF2_sGsY');"
+          coords="294,1164,203,1293" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('omyOx8VAo3Y');"
+          coords="820,1302,739,1389" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo2('video1.mp4');"
+          coords="424,1576,322,1660" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('zjhlCazLnFA');"
+          coords="947,1693,857,1825" shape="rect">
+
+
+        <area alt="" title="" target="" href="javascript:void(0);" onclick="showVideo('RAHItEOxuI0');"
+          coords="214,1974,290,2096" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('Y3iY89zExkw');"
+          coords="619,2360,537,2237" shape="rect">
+        <area target="" alt="" onclick="showVideo('AU5T-qo0H3U');" title="" href="javascript:void(0);"
+          coords="400,2503,326,2623" shape="rect">
+
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('yuddeFzEWCc');"
+          coords="945,2495,856,2616" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('9cjOrkYzgt0');"
+          coords="816,2899,735,2981" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('ZWx4W6ewJu4');"
+          coords="293,3018,212,3147" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('VAy7jSMbLb4');"
+          coords="941,3286,852,3412" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('Z4UhzAPEfWk');"
+          coords="495,3551,435,3678" shape="rect">
+        <area target="" alt="" title="" href="javascript:void(0);" onclick="showVideo('PHZAtZjWuxc');"
+          coords="101,3694,5,3779" shape="rect">
+
+
+      </map>
+
+
+    </div>
+    <div id="videoModal2" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <!--<iframe id="videoIframe" class="full-width height-480" 
+  src="video.mp4" frameborder="0" allowfullscreen></iframe>-->
+        <video playsinline autoplay muted loop id="popup-video" style="z-index:0;width:100%;">
+          <source src="video1.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div id="videoModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe id="videoIframe" class="full-width height-480" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</body>
+
+</html>

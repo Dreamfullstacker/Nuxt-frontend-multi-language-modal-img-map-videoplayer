@@ -1,0 +1,45 @@
+{
+  "name": "makhdoumin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.16.7",
+    "@nuxt/content": "^1.15.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "core-js": "^3.20.2",
+    "image-map": "^2.0.1",
+    "jquery": "^3.6.0",
+    "nuxt": "^2.15.8",
+    "nuxt-i18n": "^6.28.1",
+    "nuxt-protected-mailto": "^0.0.6",
+    "nuxt-social-meta": "^0.0.5",
+    "plyr": "^3.6.8",
+    "vue-easy-lightbox": "^0.14.1",
+    "vue-observe-visibility": "^1.0.0",
+    "vue-plyr": "^7.0.0",
+    "vue-scrollactive": "^0.9.3",
+    "vue-silentbox": "^2.4.5",
+    "vue-tippy": "^4.13.0",
+    "vue-zoom-on-hover": "^1.0.6",
+    "vue-zoom-scroll": "^1.0.29"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@nuxt/image": "^0.6.1",
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "add": "^2.0.6",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "lqip-loader": "^2.2.1",
+    "prettier": "^2.5.1",
+    "responsive-loader": "^2.3.0"
+  }
+}

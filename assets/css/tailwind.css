@@ -1,0 +1,17 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  @font-face {
+    font-family: Nassim Bold;
+    font-weight: 600;
+    src: url('~assets/nassim/Bold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: Nassim Regular;
+    font-weight: 400;
+    src: url('~assets/nassim/Regular.woff') format('woff');
+  }
+}

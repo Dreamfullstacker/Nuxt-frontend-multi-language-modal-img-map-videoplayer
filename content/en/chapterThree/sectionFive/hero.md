@@ -1,0 +1,10 @@
+---
+chapterNumber: Chapter Three
+chapterTitle: The Family
+sectionNumber: Part One
+sectionTitle: A Visit With Hala
+divId: family
+imageSource: /chapterHeros/c3/S1_Hero.jpg
+chapterFirstParagraph: Much as the entire social order would prefer to keep domestic workers invisible, their presence in the country and the home is not only due to particular social, racial, gender, and family dynamics, but also affects all of these in ways big and small. Having a domestic worker in the home means that the woman of the house is freer to pursue other things since the burden of care for the home, the children, even for elderly parents can be passed on to someone else. Someone else is expected to perform the most intimate tasks of care while always being kept strictly outside the emotional and social bonds of the family. In a society with fairly rigid gender dynamics, where women are both constricted and defined by their roles as homemakers, wives, mothers, and dutiful daughters, what does it mean to have another woman taking on a significant part of this care? Especially when she is perceived as “lesser than” due not only to class factors but racial ones as well?
+chapterSecondParagraph: 'These fictionalized accounts of women’s lives—based on interviews with real people—go behind the closed doors of the family home to tell, on the one hand, the story of all the various reasons why a woman might be motivated to invite a “stranger” into the heart of the family in order to help care for it. They outline the way this presence affects the woman’s own relationships: to her children, her home, and even to her husband and their intimate life as a couple. At the same time, between the lines, these accounts cannot help but betray and expose all of the uglier dynamics at play: the sense of racial superiority the family feels over their domestic worker, the ways in which they control every aspect of her life, how the law favors and enforces that control, and how the price for one woman’s “emancipation” is often another woman’s enslavement.'
+---

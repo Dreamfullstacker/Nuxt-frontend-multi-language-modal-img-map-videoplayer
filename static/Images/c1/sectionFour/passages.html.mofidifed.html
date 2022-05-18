@@ -1,0 +1,505 @@
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <title>Passeges</title>
+
+  <style>
+
+      
+       @font-face {
+    font-family: Nassim;
+    font-weight: 400;
+    src: url('Regular.woff') format('woff');
+  }
+     
+  .main{max-width:600px; margin:0 auto;}
+    .div1 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: black;
+
+          
+  }
+
+  .fade {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+
+.light {
+  display: none;
+  position: absolute;
+  top: -50%;
+  left: 160px;
+  max-width: 5250px;
+  max-height: 5150px;
+  margin-left: 0;
+  margin-top: 0;
+  border: 2px solid #FFF;
+  background: #FFF;
+  z-index: 1002;
+  overflow: visible;
+}
+
+#boxclose {
+  float: right;
+  cursor: pointer;
+  color: #fff;
+  border: 1px solid #AEAEAE;
+  border-radius: 3px;
+  background: #222222;
+  font-size: 31px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0px;
+  padding: 11px 3px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 1002;
+  opacity: 0.9;
+}
+
+.boxclose:before {
+  content: "x";
+}
+
+.fade:hover ~ #boxclose {
+  display:none;
+}
+
+.test:hover ~ .test2 {
+  display: none;
+}
+
+
+.parentDiv {
+    /*border: 1px solid red;*/
+    width: 160px;
+    height: 72px;
+    font-family: Nassim;
+    font-size:2em;
+    color: black;
+}
+
+.a{
+  color: black;
+
+}
+a.lightbox_open:after{
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    content: '';
+    position: absolute;
+    top: 20%;
+    height: 0.9em;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+a.lightbox_open:hover:after{
+    height: 2px;
+    top: 50%;
+}
+@media screen and (max-width: 567px) {
+.light{top:80px;left:0px;}
+}
+  </style>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+  <script>
+window.document.onkeydown = function(e) {
+  if (!e) {
+    e = event;
+  }
+  if (e.keyCode == 27) {
+    lightbox_close();
+  }
+}
+$(document).ready(function(){
+$(".lightbox_open").click(function(){
+var id=$(this).attr('id');
+var allVideo = document.getElementsByClassName("VisaChipCardVideo");
+for ( var i=0; i < allVideo.length; i++ ) {
+ 
+  // shortcut! the current div in the list
+  var thisVideo = allVideo[i];
+	thisVideo.pause();
+  }
+
+var lightBoxVideo = document.getElementById("VisaChipCardVideo"+id);
+$('.light').css('z-index',9);
+if(parseInt($(this).parent().parent().css('left'))>=250){
+$(this).parent().parent().find('.light').css('left','-260px')
+}
+$(this).parent().parent().find('.light').show();
+$(this).parent().parent().find('.light').css('z-index',99);
+//$(this).parent().parent().find('.fade').show();
+//$(this).parent().parent().find('.fade').css('opacity','0.5');
+lightBoxVideo.play();
+});
+/*$(".lightbox_close").click(function(){
+var id=$(this).attr('id');
+var val=id.split("_");
+var lightBoxVideo = document.getElementById("VisaChipCardVideo"+val[1]);
+$(this).parent().hide();
+//$(this).parent().parent().find('.fade').hide();
+//$(this).parent().parent().find('.fade').css('opacity','0');
+$(lightBoxVideo)[0].pause();
+});
+
+$(".fade").click(function(){
+var id=$(this).next('div').find('a').attr('id');
+var lightBoxVideo = document.getElementById("VisaChipCardVideo"+id);;
+$(this).prev('.light').hide();
+$(this).hide();
+$(this).css('opacity','0');
+lightBoxVideo.pause();
+});*/
+});
+function lightbox_open() {
+
+  var lightBoxVideo = document.getElementById("VisaChipCardVideo");
+  window.scrollTo(0, 0);
+  document.getElementById('light').style.display = 'block';
+  //document.getElementById('fade').style.display = 'block';
+  lightBoxVideo.play();
+}
+
+
+    </script>
+
+
+</head>
+
+
+
+<body>
+
+
+
+ <div class="main div1">     
+
+<div class="parentDiv div1">
+
+
+  <div class="light div1">
+    <!--<a  id="boxclose_1" class="boxclose lightbox_close"></a>-->
+    <video class="VisaChipCardVideo div1" id="VisaChipCardVideo1" width="250">
+        <source src="ango 1_23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="1"> بقول بنتي
+    </a>
+  </div>
+
+
+  
+</div>
+
+
+
+
+<div class="parentDiv ">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_2" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo2" width="250" >
+      <source src="ango 2_23.97.mp4" type="video/mp4">
+      <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!-- <div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="2">حسنت لنا علاقتنا الزوجية
+    </a>
+  </div>
+  
+</div>
+
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_3" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo3" width="250" >
+      <source src="racell 23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!-- <div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="3">  بحب يمشي بالبوكسر
+    </a>
+  </div>
+
+
+  
+</div>
+
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_4" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo4" width="250" >
+      <source src="rima 23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="4">انا ما رح فني غير الكوكب
+    </a>
+  </div>
+
+
+  
+</div>
+
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_5" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo5" width="250" >
+      <source src="rita 1_23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="5">صار عندها علاقة حنان مع الاولاد
+    </a>
+  </div>
+
+
+  
+</div>
+
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_6" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo6" width="250" >
+      <source src="rita 2_23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+ <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="6">سودة ومن ثقافة تانية بخفف من حضورها
+    </a>
+  </div>
+
+
+  
+</div>
+
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_7" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo7" width="250" >
+      <source src="unknown 1_23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="7">ستي هي التي ربتنا
+    </a>
+  </div>
+
+
+  
+</div>
+
+     
+     
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_7" ></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo7" width="250" >
+      <source src="unknown 2_23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="7">ستي هي التي ربتنا
+    </a>
+  </div>
+
+
+  
+</div>
+     
+     
+
+<div class="parentDiv">
+
+
+  <div class="light">
+    <!--<a class="boxclose lightbox_close" id="boxclose_8"></a>-->
+    <video class="VisaChipCardVideo" id="VisaChipCardVideo8" width="250" >
+      <source src="yara 23.97.mp4" type="video/mp4">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+   <!--<div class="fade" ></div>-->
+  
+  <div style="width:150px;">
+    <a href="javascript:void(0);" class="lightbox_open" id="8">حضورها سهلي انو ما انهار بالطلاق
+    </a>
+  </div>
+
+
+  
+</div>
+</div>
+
+
+<script>
+var divs = document.getElementsByClassName("parentDiv");
+/*const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+if (isMobile) {
+  console.log('mobile..');
+}*/
+if (window.matchMedia("(max-width: 3000px)").matches) 
+        {
+		var winWidth = $( window ).width()-250;
+		 console.log('mobile.111.');
+		//var winWidth = 320;
+			var winHeight = window.innerHeight;
+
+			// i stands for "index". you could also call this banana or haircut. it's a variable
+			var topp=20;
+			for ( var i=0; i < divs.length; i++ ) {
+			 
+			  // shortcut! the current div in the list
+			  var thisDiv = divs[i];
+			  
+			  // get random numbers for each element
+			  //randomTop = getRandomNumber(0, winHeight);
+			  randomLeft = getRandomNumber(0, winWidth);
+			 /* if(randomLeft>130){
+			  randomLeft=130;
+			  }*/
+			  // update top and left position
+			  thisDiv.style.top = topp+"px";
+			  thisDiv.style.left = randomLeft +"px";
+			  topp=topp+250;
+			  
+			}
+		}
+		else{
+		
+  // collect all the divs
+//var divs = document.getElementsByTagName('div');
+
+// get window width and height
+var winWidth = 600;
+var winHeight = window.innerHeight;
+
+// i stands for "index". you could also call this banana or haircut. it's a variable
+var topp=20;
+for ( var i=0; i < divs.length; i++ ) {
+ 
+  // shortcut! the current div in the list
+  var thisDiv = divs[i];
+  
+  // get random numbers for each element
+  //randomTop = getRandomNumber(0, winHeight);
+  randomLeft = getRandomNumber(0, winWidth);
+  if(randomLeft>450){
+  randomLeft=450;
+  }
+  // update top and left position
+  thisDiv.style.top = topp+"px";
+  thisDiv.style.left = randomLeft +"px";
+  topp=topp+200;
+  
+}
+}
+// function that returns a random number between a min and max
+function getRandomNumber(min, max) {
+  
+return Math.random() * (max - min) + min;
+  
+}
+</script>
+
+
+<style>
+
+a{
+
+  color:black;
+        text-decoration: none;
+
+}
+    a:link{
+                text-decoration: none;
+
+    }
+
+a:hover {
+  color:black;
+    	background-color: yellow;
+    text-decoration: none;
+
+    
+}
+    
+
+
+</style>
+</body>
+</html>

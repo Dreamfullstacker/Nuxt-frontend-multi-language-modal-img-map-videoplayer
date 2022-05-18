@@ -1,0 +1,151 @@
+<html>
+    <head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme --> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+.modal-content{
+	height: 15%;
+    width: 35%;
+    top: 30%;
+    left: 35%;
+    text-align: center;
+}
+.modal-content iframe{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+   
+}
+span.close{
+/*float: right; */
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    /* text-shadow: 0 1px 0 #fff; */
+    filter: alpha(opacity=20);
+    opacity: .2;
+    position: absolute;
+    border-radius: 50%;
+    background: #000;
+    width: 25px;
+    right: -9px;
+	top:-14px;
+    HEIGHT: 25PX;
+    OPACITY: 1;
+	}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container1 {
+  position: relative;
+  /*width: 100%;*/
+  
+ 
+}
+.container1 video{
+  position: absolute;
+  /*width: 100%;*/
+  z-index:-1;
+  
+ 
+}
+.modal{
+top:0;
+bottom:0;
+padding:30px 0;
+}
+#videoModal :after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#videoModal:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  opacity:0.5;
+  z-index: -1;
+}
+
+    .video-overlay {
+      width: 90px;
+      height: 130px;
+      background-color: #988969;
+      z-index: 1;
+      position:absolute;
+
+	 opacity: 0;
+    }
+	.video-overlay-sm{
+	 width: 84px;
+      height: 80px;
+     
+	}
+	
+
+</style>
+</head>
+
+    <body>
+<div class="overlay"></div>	
+
+<div id="videoEle" class="container1" style="background-image: url('imgpsh_fullsize_anim.jfif');    background-repeat: no-repeat;">
+
+    
+<video playsinline autoplay muted loop id="video-div">
+  <source src="video.mp4" type="video/mp4" >
+  
+</video>
+    
+    
+</div>
+<div id="video-overlay13" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay12" style="position:absolute;" class="video-overlay video-overlay-sm"><img src="play.png" style="padding-top:0px;margin-left:-10px;"></div>
+<div id="video-overlay11" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay10" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay9" style="position:absolute;" class="video-overlay video-overlay-sm"><img src="play.png" style="padding-top:0px;margin-left:-10px;"></div>
+<div id="video-overlay8" style="position:absolute;" class="video-overlay video-overlay-sm"><img src="play.png" style="padding-top:0px;margin-left:-10px;"></div>
+<div id="video-overlay7" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay6" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay5" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay4" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay3" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay2" style="position:absolute;" class="video-overlay video-overlay-sm"><img src="play.png" style="padding-top:0;margin-left:-10px;"></div>
+<div id="video-overlay1" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+<div id="video-overlay" style="position:absolute;" class="video-overlay"><img src="play.png" style="padding-top:15px;margin-left:-10px;"></div>
+ 
+
+<div id="videoModal" class="modal">
+            <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe id="videoIframe" class="full-width height-480" 
+  src="video.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+              </div>   
+        
+  <script src="app.js"></script>
+
+    </body>
+    </html>
