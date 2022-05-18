@@ -406,7 +406,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import IframeContainer from '../../static/Images/c1/sectionOne/IframeContainer1.vue'
+import IframeContainer from '../../static/Images/c1/sectionOne/IframeContainer.vue'
 import Passages from '../../static/Images/c1/sectionFour/Passages.vue'
 export default {
 
