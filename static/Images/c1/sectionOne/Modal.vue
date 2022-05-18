@@ -223,7 +223,7 @@ export default {
  .modal__dialog {
 	 position: relative;
 	 width: 600px;
-	 background-color: #fff;
+	 /* background-color: #fff; */
 	 border-radius: 5px;
 	 margin: 150px auto;
 	 display: flex;

@@ -169,6 +169,7 @@
     }
     .middle{
         width: 100%;
+        /* background-color: #988969; */
     }
 
     .boxclose:before {

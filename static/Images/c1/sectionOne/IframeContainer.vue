@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full"  v-if="isLoaded">
     <div class="overlay"></div>
     <div class="w-full">
       <div class="pyramid" style="position:relative; display:block;" id="gifpart"  ref="mapimage" >
@@ -42,6 +42,9 @@
       </div>
     </div>
   </div>
+  <div v-else>
+    <img src="/Images/c1/sectionOne/image-loader.gif" />
+  </div>
 </template>
 <script>
 import Modal from "./Modal";
@@ -50,16 +53,18 @@ import Modal from "./Modal";
           Modal
         },
         data() {
-          
             return{
-              
+              isLoaded: false,
             }
         },
         created(){
           
         },
         mounted(){
-
+          setTimeout(() => {
+            this.isLoaded = true
+            console.log('AAAAAAAAAA' + this.isLoaded)
+          }, 5000)
         },
 
         methods:{
@@ -78,7 +83,7 @@ import Modal from "./Modal";
             }
           },
           mouseOver(id){
-            document.getElementById("video-overlay"+ id).style.opacity = "1";
+            document.getElementById("video-overlay"+ id).style.opacity = "0.5";
           },
           mouseOut(id){
             document.getElementById("video-overlay"+ id).style.opacity = "0";
@@ -106,7 +111,7 @@ import Modal from "./Modal";
     z-index: 1;
     position:absolute;
 	  opacity: 0;
-    /* background-color: #988969; */
+    background-color: #988969;
   }
 	.video-overlay-sm{
 	  width: 84px;
