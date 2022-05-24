@@ -1888,44 +1888,52 @@ I just turned fifty. Soon, Ramzi will be traveling abroad to complete his studie
 
 
      <div>
-        <nuxt-link
-          v-if="chapternav > 2000"
-          :class="chapternav ? 'block' : 'hidden'"
-          :to="localePath('/chapterfour#blackandwhite')"
-          style="z-index: 1000"
-          class="flex items-center ml-2 stickynav"
+        <div
+          style=" z-index: 1000; 
+                  position: fixed;
+                  bottom: 10px;
+                  left: 10px;
+                  padding: 0;
+                  opacity: 100;
+                  transform-origin: 100% 100%;"
+          class="flex items-center ml-20 stickynav"
         >
           <div
-            :class="
-              chapternav < 9900
-                ? '   text-white bg-black ' 
-                : ' text-black bg-white shadow-2xl '
-            "
-            class="flex items-center content-center justify-center w-20 h-20 mt-2 text-sm text-center rounded-full font-nassimBold"
+            class="flex items-center content-center justify-center w-20 h-20 mt-2 text-sm text-center rounded-full font-nassimBold text-white bg-black"
           >
             <span v-if="this.$i18n.locale === 'ar'">
-            
-               <img
-            id="unmute"
-            src="/Images/c1/sectionOne/unmute.png"
-            style="position: absolute; width: 10%; display: block; z-index: 100"
-            @click="playmusic(1)"
-          /><img
-            id="mute"
-            src="/Images/c1/sectionOne/mute.png"
-            style="position: absolute; width: 10%; display: none; z-index: 100"
-            @click="playmusic(0)"
-          />
-          <audio id="audioplayer">
-            <source src="/Images/c1/sectionOne/horse.ogg" type="audio/ogg" />
-            <source src="/Images/c1/sectionOne/horse.mp3" type="audio/mpeg" />
-            Your browser does not support the audio element.
-          </audio>
-            
+              <svg
+              v-if="this.musicPlayer"
+                  @click="playmusic"
+                  class="w-12 text-white bg-transparent border border-transparent rounded cursor-pointer fill-current"
+                  version="1.1"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+              >
+                  <path
+                      d="M21.707 20.293l-2.03-2.03c1.44-1.686 2.31-3.846 2.31-6.27 0-4.091-2.48-7.453-6-9v2c2.38 1.38 3.99 4.04 3.99 7 0 1.83-.63 3.54-1.68 4.913L17 15.616c.6-1.1.95-2.44.95-3.628 0-1.78-.78-3.9-2-5v7.586l-2-2V3.98c0-.37-.21-.71-.53-.89 -.33-.18-.72-.16-1.03.05L7.67 6.29 3.65 2.27l-1.42 1.41 18 18 1.41-1.42ZM12 5.86v4.718L9.16 7.74l2.83-1.89ZM4 16.99h2.697l5.748 3.83c.16.11.36.16.55.16 .16 0 .32-.04.47-.12 .32-.18.52-.52.52-.89v-1.88l-2-2v2.01L7.54 15.13c-.03-.02-.06-.02-.09-.04 -.07-.04-.13-.06-.19-.08 -.07-.02-.13-.04-.2-.04 -.04-.01-.06-.02-.1-.02h-3v-6h.87L3.05 7.17c-.66.33-1.11.99-1.11 1.77v6c0 1.1.89 2 2 2Z"
+                  />
+              </svg>
+              <svg 
+              v-if="!this.musicPlayer"
+                  @click="playmusic"
+                  class="w-12 text-white bg-transparent border border-transparent rounded cursor-pointer fill-current"
+                  version="1.1"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg" > 
+                <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/> 
+                <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/> 
+                <path d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"/> 
+              </svg>
+              <audio id="musicplayer">
+                <source src="/Images/c1/sectionOne/horse.ogg" type="audio/ogg" />
+                <source src="/Images/c1/sectionOne/horse.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
             </span>
             <span v-if="this.$i18n.locale === 'en'"> TEST TEST  </span>
           </div>
-        </nuxt-link>
+        </div>
       </div>
 
 
@@ -2019,6 +2027,7 @@ import { mapMutations } from 'vuex'
 import IframeContainer from '../../static/Images/c1/sectionOne/IframeContainer.vue'
 import ImageMoveTest from '../../static/Images/c1/sectionOne/ImageMoveTest.vue'
 import Passages from '../../static/Images/c1/sectionFour/Passages.vue'
+import { deepStrictEqual } from 'assert'
 
 
 
@@ -2183,7 +2192,7 @@ export default {
   data() {
     return {
       chapternav: 0,
-
+      musicPlayer : true,
       currentZoomer: true,
       zoomerSession: false,
     }
@@ -2196,6 +2205,14 @@ export default {
     handleScroll() {
       this.chapternav = window.scrollY
     },
+    playmusic() {
+      console.log("first")
+      if(this.musicPlayer)
+      document.getElementById("musicplayer").pause();
+      else 
+      document.getElementById("musicplayer").play();
+      this.musicPlayer = !this.musicPlayer
+    }
   },
   mounted() {
     setInterval(() => {
