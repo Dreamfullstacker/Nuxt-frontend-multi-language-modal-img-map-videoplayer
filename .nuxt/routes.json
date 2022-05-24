@@ -66,6 +66,12 @@
     "chunkName": "pages/chapterthree/index copy"
   },
   {
+    "name": "chapterthree-index2___ar",
+    "path": "/chapterthree/index2",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index2.vue",
+    "chunkName": "pages/chapterthree/index2"
+  },
+  {
     "name": "about___en",
     "path": "/en/about",
     "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\about\\\\index.vue",
@@ -124,6 +130,12 @@
     "path": "/en/chapterthree/index%20copy",
     "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index copy.vue",
     "chunkName": "pages/chapterthree/index copy"
+  },
+  {
+    "name": "chapterthree-index2___en",
+    "path": "/en/chapterthree/index2",
+    "component": "E:\\\\MEVN\\\\Task\\\\2022_2_2 intergrateHTMLtoVue\\\\makhdoumin-master4\\\\pages\\\\chapterthree\\\\index2.vue",
+    "chunkName": "pages/chapterthree/index2"
   },
   {
     "name": "index___ar",
