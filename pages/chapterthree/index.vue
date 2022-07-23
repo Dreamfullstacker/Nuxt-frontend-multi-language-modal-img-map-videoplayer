@@ -1949,7 +1949,7 @@ I just turned fifty. Soon, Ramzi will be traveling abroad to complete his studie
               </svg> -->
               <audio id="musicplayer">
                 <source src="/Images/c1/sectionOne/horse.ogg" type="audio/ogg" />
-                <source src="/Images/c1/sectionOne/horse.mp3" type="audio/mpeg" />
+                <source src="/Images/c1/sectionOne/landing_audio.mp3" type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
             </span>
@@ -1980,16 +1980,16 @@ I just turned fifty. Soon, Ramzi will be traveling abroad to complete his studie
             id="unmute"
             src="/Images/c1/sectionOne/unmute.png"
             style="position: absolute; width: 10%; display: block; z-index: 100"
-            @click="playmusic(1)"
+            @click="playmusic(0)"
           /><img
             id="mute"
             src="/Images/c1/sectionOne/mute.png"
             style="position: absolute; width: 10%; display: none; z-index: 100"
-            @click="playmusic(0)"
+            @click="playmusic(1)"
           />
           <audio id="audioplayer">
             <source src="/Images/c1/sectionOne/horse.ogg" type="audio/ogg" />
-            <source src="/Images/c1/sectionOne/horse.mp3" type="audio/mpeg" />
+            <source src="/Images/c1/sectionOne/landing_audio.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
             
@@ -2346,6 +2346,6 @@ export default {
 <style>
 .custom-background {
   background: linear-gradient(to top, #00bce3ba, #00bce3cc),
-    /* url('~assets/Background_.jpg') repeat; */
+    url('~assets/Background_.jpg') repeat; 
 }
 </style>

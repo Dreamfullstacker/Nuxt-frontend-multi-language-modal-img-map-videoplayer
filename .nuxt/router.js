@@ -16,6 +16,7 @@ const _74bb0d20 = () => interopDefault(import('..\\pages\\team\\index.vue' /* we
 const _8466a378 = () => interopDefault(import('..\\pages\\trailer\\index.vue' /* webpackChunkName: "pages/trailer/index" */))
 const _1daae439 = () => interopDefault(import('..\\pages\\chapterthree\\index copy.vue' /* webpackChunkName: "pages/chapterthree/index copy" */))
 const _00cdd456 = () => interopDefault(import('..\\pages\\chapterthree\\index2.vue' /* webpackChunkName: "pages/chapterthree/index2" */))
+const _00dbebd7 = () => interopDefault(import('..\\pages\\chapterthree\\index3.vue' /* webpackChunkName: "pages/chapterthree/index3" */))
 
 const emptyFn = () => {}
 
@@ -77,6 +78,10 @@ export const routerOptions = {
     component: _00cdd456,
     name: "chapterthree-index2___ar"
   }, {
+    path: "/chapterthree/index3",
+    component: _00dbebd7,
+    name: "chapterthree-index3___ar"
+  }, {
     path: "/en/about",
     component: _4e7c3aea,
     name: "about___en"
@@ -120,6 +125,10 @@ export const routerOptions = {
     path: "/en/chapterthree/index2",
     component: _00cdd456,
     name: "chapterthree-index2___en"
+  }, {
+    path: "/en/chapterthree/index3",
+    component: _00dbebd7,
+    name: "chapterthree-index3___en"
   }, {
     path: "/",
     component: _cff24d46,
